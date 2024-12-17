@@ -1,0 +1,245 @@
+.nav {
+    background: transparent;
+    width: 78vw;
+    border-radius: 10px;
+    height: 6vh;
+    margin: auto;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2%;
+    z-index: 10;
+}
+
+.navlinks {
+    display: flex;
+    gap: 5vw;
+}
+.navlinks ul {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    
+}
+
+.navlinks ul li a {
+    text-decoration: none;
+    color: rgb(240, 240, 240);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.menu-logo {
+    display: none;
+}
+
+
+
+
+/* button css code */
+.hireMeBtn button {
+    outline: 0;
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 140px;
+    height: 40px;
+    border-radius: 0.5em;
+    box-shadow: 0 0.625em 1em 0 rgba(30, 143, 255, 0.35);
+    overflow: hidden;
+   }
+   
+   .hireMeBtn button div {
+    transform: translateY(0px);
+    width: 100%;
+   }
+   
+   .hireMeBtn button,
+   .hireMeBtn button div {
+    transition: 0.6s cubic-bezier(.16,1,.3,1);
+   }
+   
+   .hireMeBtn button div span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0.75em 1.125em;
+   }
+   
+   .hireMeBtn button div:nth-child(1) {
+    background-color: #1e90ff;
+   }
+   
+   .hireMeBtn button div:nth-child(2) {
+    background-color: #21dc62;
+   }
+   
+   .hireMeBtn  button:hover {
+    box-shadow: 0 0.625em 1em 0 rgba(33, 220, 98, 0.35);
+   }
+   
+   .hireMeBtn button:hover div {
+    transform: translateY(-40px);
+    cursor: pointer;
+   }
+   
+   .hireMeBtn button p {
+    font-size: 17px;
+    font-weight: bold;
+    color: #ffffff;
+   }
+   
+   .hireMeBtn button:active {
+    transform: scale(0.95);
+   }
+
+
+   /* menuNavigation icon css code */
+  
+
+
+
+
+
+   @media (max-width:900px) {
+    .navlinks {
+        display: none;
+
+    }
+    .menu-logo{
+        display: flex;
+    }
+    .nav {
+        height: 6vh;
+        padding-right: 20px;
+       
+    }
+    .main-name h2{
+        font-weight: 500;
+        font-size: 4vw;
+    }
+    .burger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        border: none;
+        width: 28px;
+        height: 20px;
+        transition: all 250ms ease-out;
+        cursor: pointer;
+       }
+    
+       .burger::before, .burger::after {
+        content: "";
+        width: 35px;
+        height: 2px;
+        position: absolute;
+        background: rgb(250, 250, 250);
+        transition: all 250ms ease-out;
+        will-change: transform;
+       }
+       .burger::before {
+        transform: translateY(-3px);
+       }
+       .burger::after {
+        transform: translateY(3px);
+       }
+       .active.burger::before {
+        transform: translateY(0) rotate(45deg);
+       }
+       .active.burger::after{
+        transform: translateY(0) rotate(-45deg);
+       }
+    
+       .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        z-index: -1;
+        background-color: rgb(202, 19, 19);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        will-change: transform;
+       }
+    
+       .overlay-menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+       }
+       .menu-items {
+        display: flex;
+        cursor: pointer;
+        /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
+       }
+    
+       .menu-items p {
+        position: relative;
+        text-align: center;
+        font-size: 15vw;
+        line-height: 80%;
+        will-change: transform;
+        transition: letter-spacing 0.3s;
+       }
+       .menu-items p a {
+        color: #cdc6b3;
+       }
+       .menu-items button {
+        margin-top: 5vw;
+        max-width: 50vw;
+        height: 60px;
+       }
+       .menu-items  button div span {
+        height: 60px;
+        font-size: 2vw;
+       }
+       .menu-items  button:hover div {
+        transform: translateY(-60px);
+       }
+       .menu-items button div span p {
+        font-size: 30px;
+       }
+       .menu-items p:hover{
+        letter-spacing: 0.075em;
+       }
+       .menu-items p#active::after {
+        content: "";
+        position: absolute;
+        top: 45%;
+        left: 0;
+        transform: translateY(-50%);
+        background: #c03f13;
+        width: 0%;
+        height: 12px;
+       }
+       .sub-nav {
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.5em;
+        opacity: 0;
+        overflow: hidden;
+        padding: 50px;
+    
+       }
+       .sub-nav p a{
+        font-size: 14px;
+        color: #cdc6b3;
+       }
+}
+
