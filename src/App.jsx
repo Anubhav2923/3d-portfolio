@@ -1,4 +1,5 @@
-import Contact from "./components/contact/contact";
+
+
 import { Hero } from "./components/hero/hero";
 import Navbar from "./components/navbar/navbar";
 import Portfolio from "./components/portfolio/portfolio";
@@ -29,7 +30,7 @@ const App = () => {
             <Portfolio />
           </section>
           <section id="#contact">
-            <Contact />
+          
           </section>
           
         </div>
