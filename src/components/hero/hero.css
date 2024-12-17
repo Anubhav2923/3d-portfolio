@@ -231,7 +231,7 @@
     bottom: 0;
     height: 50%;
     overflow: hidden;
-    scale: 6;
+    scale: 4;
   }
   .hsection.left {
     gap: 26px;

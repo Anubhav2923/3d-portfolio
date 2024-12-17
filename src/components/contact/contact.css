@@ -1,3 +1,14 @@
-#contact {
-    
+.contact {
+   display: flex;
+}
+.contact-left {
+    width: 50%;
+    border: 1px solid green;
+}
+.contact-right {
+    width: 50%;
+    border: 1px solid white;
+    text-align: end;
+    overflow: hidden;
+    height: 50vh;
 }

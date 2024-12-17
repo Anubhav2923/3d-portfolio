@@ -1,9 +1,20 @@
-import "./contact.css"
+import "./contact.css";
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import Earth from "./Earth";
+
 
 const Contact = () => {
   return (
-    <div id="contact" >Contact</div>
-  )
-}
+    <div className="contact">
+      <div className="contact-left">
+        left
+      </div>
+      <div className="contact-right">
+        <Earth/>
+      </div>
+    </div>
+  );
+};
 
-export default Contact
+export default Contact;
