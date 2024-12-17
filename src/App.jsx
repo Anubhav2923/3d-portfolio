@@ -1,5 +1,3 @@
-
-
 import Contact from "./components/contact/Contact";
 import { Hero } from "./components/hero/hero";
 import Navbar from "./components/navbar/navbar";
@@ -31,7 +29,7 @@ const App = () => {
             <Portfolio />
           </section>
           <section id="#contact">
-            <Contact/>
+            <Contact />
           </section>
           
         </div>
