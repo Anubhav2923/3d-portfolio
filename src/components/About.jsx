@@ -1,69 +1,3 @@
-// import React from "react";
-// import { Tilt } from "react-tilt";
-// import { motion } from "framer-motion";
-
-// import { style } from "../style";
-// import { services } from "../constants";
-// import { SectionWrapper } from "../hoc";
-// import { fadeIn, textVariant } from "../utils/motion";
-
-// const ServiceCard = ({ index, title, icon }) => (
-//   <Tilt
-//     options={{
-//       max: 45,
-//       scale: 1,
-//       speed: 450,
-//     }}
-//     className='xs:w-[250px] w-full'
-//   >
-//     <motion.div
-//       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-//       className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
-//     >
-//       <div
-//         className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
-//       >
-//         <img
-//           src={icon}
-//           alt='web-development'
-//           className='w-16 h-16 object-contain'
-//         />
-
-//         <h3 className='text-white text-[20px] font-bold text-center'>
-//           {title}
-//         </h3>
-//       </div>
-//     </motion.div>
-//   </Tilt>
-// );
-
-// const About = () => {
-//   return (
-//     <>
-//       <motion.div variants={textVariant()}>
-//         <p className={style.sectionSubText}>Introduction</p>
-//         <h2 className={style.sectionHeadText}>Overview.</h2>
-//       </motion.div>
-
-//       <motion.p
-//         variants={fadeIn("", "", 0.1, 1)}
-//         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-//       >
-//         I'm a skilled software developer with experience in Full Stack Web development and
-//         JavaScript, and expertise in frameworks like React, Node.js, and Express.js. I'm passionate about creating scalable, efficient, and user-friendly applications.
-//         real-world problems. Let's work together to bring your ideas to life!
-//       </motion.p>
-
-//       <div className='mt-20 flex flex-wrap gap-10'>
-//         {services.map((service, index) => (
-//           <ServiceCard key={service.title} index={index} {...service} />
-//         ))}
-//       </div>
-//     </>
-//   );
-// };
-
-// export default SectionWrapper(About, "about");
 
 import React, { useState } from "react";
 import Grid1 from "../assets/grid1.png";
@@ -96,10 +30,10 @@ const About = () => {
   };
 
   return (
-    <section className="c-space my-20">
+    <section className="c-space my-20" id="about">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full">
         <div className="col-span-1 xl:row-span-3">
-          <div className="grid-container ">
+          <div className="grid-container  ">
             <img
               src={Grid1}
               alt=""
