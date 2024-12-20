@@ -208,3 +208,31 @@
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
 }
+
+
+/* code for about us page */
+
+
+@layer utilities {
+
+  .c-space {
+    @apply sm:px-10 px-5;
+  }
+
+ /* about section */
+ .grid-container {
+  @apply w-full h-full border border-black-300 bg-black-400 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+} 
+
+.grid-headtext {
+  @apply text-xl font-semibold mb-2 text-white ;
+}
+
+
+
+.copy-container {
+  @apply cursor-pointer flex justify-center items-center gap-2;
+} 
+
+}
+

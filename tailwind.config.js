@@ -11,6 +11,8 @@ export default {
         "black-100": "#100d25",
         "black-200": "#090325",
         "white-100": "#f3f3f3",
+        'black-300': '#161518', // Define the color for border-black-300
+        'black-400': '#0B111B', // Define the color for bg-black-200
       },
       boxShadow: {
         card: "0px 35px 120px -15px #211e35",
