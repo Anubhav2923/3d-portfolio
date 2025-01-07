@@ -1,11 +1,11 @@
-
 import React, { useState } from "react";
 import Grid1 from "../assets/grid1.png";
 import Grid2 from "../assets/grid2.png";
-import Grid3 from '../assets/grid3.png';
-import Grid4 from '../assets/grid4.png';
-import tick from '../assets/tick.svg';
-import close from '../assets/copy.svg';
+import Grid3 from "../assets/grid3.png";
+import Grid4 from "../assets/grid4.png";
+import tick from "../assets/tick.svg";
+import close from "../assets/copy.svg";
+import grid2Video from "../assets/grid2video.webm";
 
 
 import Globe from "react-globe.gl";
@@ -13,16 +13,15 @@ import { Button } from "@material-tailwind/react";
 import { data } from "react-router-dom";
 
 const About = () => {
-    
   const [hasCopied, setHasCopied] = useState(false);
 
   const handleCopy = () => {
     // Copy the email to the clipboard
-    navigator.clipboard.writeText('anubhavsinghas9@gmail.com');
-  
+    navigator.clipboard.writeText("anubhavsinghas9@gmail.com");
+
     // Update the state to show the "copied" status
     setHasCopied(true);
-  
+
     // Reset the "copied" status after 2 seconds
     setTimeout(() => {
       setHasCopied(false);
@@ -54,10 +53,17 @@ const About = () => {
 
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
-            <img
+            {/* <img
               src={Grid2}
               className="sm:h-[276px] w-full h-fit object-contain "
-            />
+            /> */}
+            <video autoPlay loop muted 
+              className="sm:h-[276px] w-full h-fit object-contain"
+            >
+              <source src={grid2Video} type="video/mp4" />
+              {/* You can add more formats here if needed */}
+              
+            </video>
             <div>
               <p className="grid-headtext">Full Stack Developer</p>
               <p className="grid-subtext text-[#afb0b6]">
@@ -98,48 +104,66 @@ const About = () => {
                 I'm based in India, with remote work available
               </p>
               <div className="flex w-max gap-4 mt-10 m-auto border rounded  ">
-                <Button variant="" className="py-2 ">Contact Me</Button>
-                
+                <Button variant="" className="py-2 ">
+                  Contact Me
+                </Button>
               </div>
             </div>
           </div>
         </div>
 
         <div className="xl:col-span-2 xl:row-span-3">
-            <div className="grid-container">
-                <img src={Grid3} alt="grid-3" className="w-full sm:h-[266px] h-fit object-contain"  />
+          <div className="grid-container">
+            <img
+              src={Grid3}
+              alt="grid-3"
+              className="w-full sm:h-[266px] h-fit object-contain"
+            />
 
-                <div>
-                  <p className="grid-headtext
+            <div>
+              <p
+                className="grid-headtext
                        text-xl font-semibold mb-2 text-white font-generalsans;
   }
-                  ">My Passion for Coding</p>
-                  <p className="grid-subtext 
+                  "
+              >
+                My Passion for Coding
+              </p>
+              <p
+                className="grid-subtext 
                      text-[#afb0b6] text-base font-generalsans;
-                  ">I love solving, problems and building things through code. Coding isn't just my profession - its my passion.</p>
-                </div>
-
+                  "
+              >
+                I love solving, problems and building things through code.
+                Coding isn't just my profession - its my passion.
+              </p>
             </div>
+          </div>
         </div>
 
         <div className="xl:col-span-1 xl:row-span-2">
-            <div className="grid-container">
-              <img src= {Grid4} alt=""  
-                  className="w-full md:h-[226px] sm:h-[276px] h-fit object-cover sm:object-top"
-              />
+          <div className="grid-container">
+            <img
+              src={Grid4}
+              alt=""
+              className="w-full md:h-[226px] sm:h-[276px] h-fit object-cover sm:object-top"
+            />
+            
 
-              <div className="space-y-2">
-                  <p className="text-[#afb0b6] text-base font-generalsans text-center">Contact me</p>
+            <div className="space-y-2">
+              <p className="text-[#afb0b6] text-base font-generalsans text-center">
+                Contact me
+              </p>
 
-                  <div className="copy-container" onClick={handleCopy}>
-                      <img src= {hasCopied ? tick : close } alt="copy" />
-                      <p className="lg:text-xl md:text-xl font-medium text-gray_gradient text-white ">anubhavsinghas9@gmail.com</p>
-                  </div>
+              <div className="copy-container" onClick={handleCopy}>
+                <img src={hasCopied ? tick : close} alt="copy" />
+                <p className="lg:text-xl md:text-xl font-medium text-gray_gradient text-white ">
+                  anubhavsinghas9@gmail.com
+                </p>
               </div>
-
             </div>
+          </div>
         </div>
-
       </div>
     </section>
   );
